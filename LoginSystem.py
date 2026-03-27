@@ -2,7 +2,7 @@ import time, os
 import json
 import hashlib
 
-
+CurrentUser = ""
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -35,6 +35,7 @@ def Login():
         if users[Tempuser]["Password"] == HashPassword(Temppassword): 
             os.system('cls')
             print("Login Successful") 
+            CurrentUser = Tempuser 
             time.sleep(1.5)
             os.system('cls')
         else: 
